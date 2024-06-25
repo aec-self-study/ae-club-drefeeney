@@ -1,0 +1,51 @@
+[0m23:26:40.555120 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x735e24d65a50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x735e23622110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x735e23623f40>]}
+
+
+============================== 23:26:40.558632 | 07f1b2ac-dc15-4b17-bafa-740ef289b93c ==============================
+[0m23:26:40.558632 [info ] [MainThread]: Running with dbt=1.8.2
+[0m23:26:40.559266 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/vscode/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init demo-dbt-project', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m23:26:40.566296 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse dict {'dir': PosixPath('/home/vscode/.dbt')}
+[0m23:26:40.566872 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m23:27:20.246090 [debug] [MainThread]: Starter project path: /home/vscode/.local/lib/python3.10/site-packages/dbt/include/starter_project
+[0m23:27:20.250624 [info ] [MainThread]: 
+Your new dbt project "demo_dbt_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m23:27:20.251446 [info ] [MainThread]: Setting up your profile.
+[0m23:27:30.548274 [error] [MainThread]: Encountered an error:
+
+[0m23:27:30.549979 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/vscode/.local/lib/python3.10/site-packages/dbt/cli/requires.py", line 138, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/home/vscode/.local/lib/python3.10/site-packages/dbt/cli/requires.py", line 101, in wrapper
+    return func(*args, **kwargs)
+  File "/home/vscode/.local/lib/python3.10/site-packages/dbt/cli/main.py", line 470, in init
+    results = task.run()
+  File "/home/vscode/.local/lib/python3.10/site-packages/dbt/task/init.py", line 347, in run
+    self.setup_profile(profile_name)
+  File "/home/vscode/.local/lib/python3.10/site-packages/dbt/task/init.py", line 262, in setup_profile
+    adapter = self.ask_for_adapter_choice()
+  File "/home/vscode/.local/lib/python3.10/site-packages/dbt/task/init.py", line 243, in ask_for_adapter_choice
+    numeric_choice = click.prompt(prompt_msg, type=click.INT)
+  File "/home/vscode/.local/lib/python3.10/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "/home/vscode/.local/lib/python3.10/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m23:27:30.551305 [debug] [MainThread]: Resource report: {"command_name": "init", "command_wall_clock_time": 50.04685, "process_user_time": 1.17467, "process_kernel_time": 0.11159, "process_mem_max_rss": "85572", "process_in_blocks": "40", "process_out_blocks": "72", "command_success": false}
+[0m23:27:30.551931 [debug] [MainThread]: Command `dbt init` failed at 23:27:30.551825 after 50.05 seconds
+[0m23:27:30.552370 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x735e24d65a50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x735e23622680>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x735e234b59c0>]}
+[0m23:27:30.553012 [debug] [MainThread]: Flushing usage events
